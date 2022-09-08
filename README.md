@@ -25,6 +25,8 @@ This creates and places the app and the assets files in the /build/web directory
 
 after that just need to copy and paste the files inside `build/web` to the hosting provider.
 
-##*DISCLAIMER*
-Sometimes the local assets are build in wrong path inside the `build/web/assets/ folder.
+ ## =DISCLAIMER=
+<br />
+Sometimes the local assets are build in wrong path inside the `build/web/assets/ folder.`
+<br />
 Just need to change the correct path if this happened.
