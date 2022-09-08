@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'controller/app_controller.dart';
 
 void main() {
-  // setPathUrlStrategy();
+  WidgetsFlutterBinding.ensureInitialized();
   Get.put(AppController(isUnitTest: false));
   runApp(const MyApp());
 }

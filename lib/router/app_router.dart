@@ -1,4 +1,5 @@
 import 'package:ayiconnect_web/pages/page3.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
@@ -53,7 +54,18 @@ class AppRouter {
         },
       ),
     ],
+    errorBuilder: (context, state) {
+      // use a post frame callback to perform your navigation after
+      // the build frame has finished
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        router.go('/');
+      });
+
+      // you must return a widget anyway
+      return const SizedBox.shrink();
+    },
     initialLocation: '/page1',
+
     // turn off the # in the URLs on the web
     urlPathStrategy: UrlPathStrategy.path,
     redirect: (state) {
