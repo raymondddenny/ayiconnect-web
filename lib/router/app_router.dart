@@ -60,6 +60,8 @@ class AppRouter {
       final query = state.queryParams['isRegistered'];
       if (query == 'true') {
         return '/page1';
+      } else if (state.location == '/') {
+        return '/page1';
       }
       return null;
     },
